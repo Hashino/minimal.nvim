@@ -1,4 +1,4 @@
--- INFO: vim options
+-- INFO: options
 
 -- Set <space> as the leader key
 -- Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -100,6 +100,11 @@ vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter" }, { confirm
 require("nvim-treesitter.install").update("all")
 
 require("nvim-treesitter.configs").setup({
+  sync_install = true,
+
+  modules = {},
+  ignore_install = {},
+
   ensure_installed = {
     "lua",
     "c",
