@@ -204,9 +204,6 @@ for server, config in pairs(lsp_servers) do
   })
 end
 
--- NOTE: if all you want is lsp + completion + highlighting, you're done.
--- the rest of the lines are just quality-of-life plugins and can be removed.
-
 -- INFO: fuzzy finder
 vim.pack.add({
   "https://github.com/nvim-lua/plenary.nvim",       -- library dependency
