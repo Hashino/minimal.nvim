@@ -11,7 +11,7 @@ Requires neovim version `0.12` or greater
 - `git`
 - `unzip`
 - `ripgrep`
-- clipboard tool: xclip/xsel/win32yank
+- clipboard tool: xclip/xsel/win32yank (see `h: clipboard-tool`)
 - a [nerd font](https://www.nerdfonts.com/) (ensure the terminal running neovim is using it)
 
 to install run:
