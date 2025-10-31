@@ -1,12 +1,15 @@
 # Introduction
-Minimal neovim config for lsp + completion + highlighting. Also provides a fuzzy
-finder and some quality-of-life plugins.
+Minimal neovim comes in two flavors: `bare-minimum` and `featureful`. Whereas
+the first contains only the bare minimum for having completions + lsp + fuzzy in
+neovim, the featureful version also contains some quality of life plugins
 
-![screenshot1](screenshots/1.png)
+## Screenshots
 
-If you want strictly the bare minimun necessary for lsp + completion + fuzzy
-finding. download the init.lua from the `bare-minimun` branch instead:
-![screenshot2](screenshots/2.png)
+bare-minimum version:
+![bare-minimum](screenshots/bare-minimum.png)
+
+featureful version:
+![featureful](screenshots/bare-minimum.png)
 
 # Installation
 Requires neovim version `0.12` or greater
@@ -18,17 +21,21 @@ Requires neovim version `0.12` or greater
 - clipboard tool: xclip/xsel/win32yank (see `h: clipboard-tool`)
 - a [nerd font](https://www.nerdfonts.com/) (ensure the terminal running neovim is using it)
 
+---
 
 to install run:
-```bash
-mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/main/init.lua -O "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim/init.lua && nvim
-```
-for the `bare-minimum` version, run:
+
+for `bare-minimum`
 ```bash
 mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/bare-minimum/init.lua -O "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim/init.lua && nvim
 ```
+for `featureful`
+```bash
+mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/main/init.lua -O "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim/init.lua && nvim
+```
 or download [init.lua](init.lua) via the browser to the neovim config directory:
 
+### Location
 Neovim's configurations are located under the following paths, depending on your OS:
 
 | OS | PATH |
