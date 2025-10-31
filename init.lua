@@ -213,6 +213,11 @@ vim.pack.add({
   "https://github.com/nvim-tree/nvim-web-devicons"
 }, { confirm = false })
 
+-- INFO File editor
+vim.pack.add({ "https://github.com/stevearc/oil.nvim" }, { confirm = false })
+require('oil').setup()
+vim.keymap.set("n", "<leader>o", function() vim.cmd('Oil') end, {desc = "[O]il file editor"})
+
 -- INFO: fuzzy finder
 vim.pack.add({ "https://github.com/nvim-telescope/telescope.nvim" }, { confirm = false })
 
