@@ -194,7 +194,6 @@ require("mason-tool-installer").setup({
 for server, config in pairs(lsp_servers) do
   vim.lsp.config(server, {
     settings = config,
-    capabilities = capabilities,
 
     -- only create the keymaps if the server attaches successfully
     on_attach = function(_, bufnr)
