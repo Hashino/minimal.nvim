@@ -18,5 +18,11 @@ to install run:
 ```bash
 mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/main/init.lua -O "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim/init.lua && nvim
 ```
+or dowload [init.lua](init.lua) to the neovim config directory:
 
-preferably, fork the repo and clone the fork instead
+Neovim's configurations are located under the following paths, depending on your OS:
+
+| OS | PATH |
+| :- | :--- |
+| Linux, MacOS | `$XDG_CONFIG_HOME/nvim`, `~/.config/nvim` |
+| Windows | `%localappdata%\nvim\` |
