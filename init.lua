@@ -187,13 +187,10 @@ require("mason-tool-installer").setup({
   ensure_installed = vim.tbl_keys(lsp_servers),
 })
 
-local capabilities = require("blink.cmp").get_lsp_capabilities()
-
 -- configure each lsp server on the table
 for server, config in pairs(lsp_servers) do
   vim.lsp.config(server, {
     settings = config,
-    capabilities = capabilities,
 
     -- only create the keymaps if the server attaches successfully
     on_attach = function(_, bufnr)
