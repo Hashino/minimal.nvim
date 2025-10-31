@@ -162,6 +162,7 @@ require("blink.cmp").setup({
 -- INFO: lsp server installation and configuration
 
 -- lsp servers we want to use and their configuration
+-- see `:h lspconfig-all` for available servers and their settings
 local lsp_servers = {
   lua_ls = {
     Lua = {
@@ -214,6 +215,9 @@ vim.pack.add({
   "https://github.com/nvim-lua/plenary.nvim",
   "https://github.com/nvim-tree/nvim-web-devicons"
 }, { confirm = false })
+
+-- NOTE: if all you want is lsp + completion + highlighting, you're done.
+-- the rest of the lines are just quality-of-life plugins
 
 -- INFO: fuzzy finder
 vim.pack.add({ "https://github.com/nvim-telescope/telescope.nvim" }, { confirm = false })
