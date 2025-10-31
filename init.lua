@@ -201,8 +201,8 @@ for _, server_name in pairs(vim.tbl_keys(lsp_servers)) do
 
     -- only create the keymaps if the server attaches successfully
     on_attach = function(_, bufnr)
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition,
-        { buffer = bufnr, desc = "LSP: [G]oto [D]efinition", })
+      vim.keymap.set("n", "grd", vim.lsp.buf.definition,
+        { buffer = bufnr, desc = "vim.lsp.buf.definition()", })
 
       vim.keymap.set("n", "<leader>f", vim.lsp.buf.format,
         { buffer = bufnr, desc = "LSP: [F]ormat Document", })
@@ -210,14 +210,14 @@ for _, server_name in pairs(vim.tbl_keys(lsp_servers)) do
   })
 end
 
+-- NOTE: if all you want is lsp + completion + highlighting, you're done.
+-- the rest of the lines are just quality-of-life plugins
+
 -- INFO: dependencies for other plugins
 vim.pack.add({
   "https://github.com/nvim-lua/plenary.nvim",
   "https://github.com/nvim-tree/nvim-web-devicons"
 }, { confirm = false })
-
--- NOTE: if all you want is lsp + completion + highlighting, you're done.
--- the rest of the lines are just quality-of-life plugins
 
 -- INFO: fuzzy finder
 vim.pack.add({ "https://github.com/nvim-telescope/telescope.nvim" }, { confirm = false })
