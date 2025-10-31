@@ -164,11 +164,10 @@ require("blink.cmp").setup({
 -- lsp servers we want to use and their configuration
 local lsp_servers = {
   lua_ls = {
-    settings = {
-      Lua = {
-        diagnostics = {
-          globals = { "vim", },
-        },
+    Lua = {
+      diagnostics = {
+        globals = { "vim", },
+        undefined_global = false,
       },
     },
   },
