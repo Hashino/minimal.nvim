@@ -188,7 +188,7 @@ vim.pack.add({
 require("mason").setup()
 require("mason-lspconfig").setup()      -- translates mason package names to lspconfig server names
 require("mason-tool-installer").setup({ -- allows installation of lsp servers programmatically
-  ensure_installed = lsp_servers,
+  ensure_installed = vim.tbl_keys(lsp_servers),
 })
 
 local capabilities = require("blink.cmp").get_lsp_capabilities()
