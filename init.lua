@@ -160,6 +160,8 @@ require("blink.cmp").setup({
 })
 
 -- INFO: lsp server installation and configuration
+
+-- lsp servers we want to use and their configuration
 local lsp_servers = {
   lua_ls = {
     settings = {
@@ -175,13 +177,13 @@ local lsp_servers = {
   gopls = {},
 }
 
--- default configs for lsp servers
-vim.pack.add({ "https://github.com/neovim/nvim-lspconfig" }, { confirm = false })
-
--- package manager for lsp servers
-vim.pack.add({ "https://github.com/mason-org/mason.nvim" }, { confirm = false })
-vim.pack.add({ "https://github.com/mason-org/mason-lspconfig.nvim" }, { confirm = false })
-vim.pack.add({ "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" }, { confirm = false })
+-- lsp package manager and config
+vim.pack.add({
+  "https://github.com/neovim/nvim-lspconfig",                    -- default configs for lsps
+  "https://github.com/mason-org/mason.nvim",                     -- package manager
+  "https://github.com/mason-org/mason-lspconfig.nvim",           -- lspconfig bridge
+  "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" -- auto installer
+}, { confirm = false })
 
 require("mason").setup()
 require("mason-lspconfig").setup()      -- translates mason package names to lspconfig server names
@@ -191,10 +193,10 @@ require("mason-tool-installer").setup({ -- allows installation of lsp servers pr
 
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
+-- configure each lsp server
 for _, server_name in pairs(vim.tbl_keys(lsp_servers)) do
   vim.lsp.config(server_name, {
     settings = lsp_servers[server_name] or {},
-
     capabilities = capabilities,
 
     -- only create the keymaps if the server attaches successfully
@@ -209,8 +211,10 @@ for _, server_name in pairs(vim.tbl_keys(lsp_servers)) do
 end
 
 -- INFO: dependencies for other plugins
-vim.pack.add({ "https://github.com/nvim-lua/plenary.nvim" }, { confirm = false })
-vim.pack.add({ "https://github.com/nvim-tree/nvim-web-devicons" }, { confirm = false })
+vim.pack.add({
+  "https://github.com/nvim-lua/plenary.nvim",
+  "https://github.com/nvim-tree/nvim-web-devicons"
+}, { confirm = false })
 
 -- INFO: fuzzy finder
 vim.pack.add({ "https://github.com/nvim-telescope/telescope.nvim" }, { confirm = false })
@@ -249,21 +253,16 @@ require("which-key").setup({
 })
 
 -- INFO: utility plugins
+vim.pack.add({
+  "https://github.com/windwp/nvim-autopairs",    -- auto pairs
+  "https://github.com/VidocqH/auto-indent.nvim", -- auto indent
+  "https://github.com/numToStr/Comment.nvim",    -- gb/gc to (un)comment lines
+  "https://github.com/folke/todo-comments.nvim"  -- highlight TODO/INFO/WARN comments
+}, { confirm = false })
 
--- auto pairs
-vim.pack.add({ "https://github.com/windwp/nvim-autopairs" }, { confirm = false })
 require("nvim-autopairs").setup()
-
--- auto indent
-vim.pack.add({ "https://github.com/VidocqH/auto-indent.nvim" }, { confirm = false })
 require("auto-indent").setup()
-
--- gb/gc to (un)comment lines
-vim.pack.add({ "https://github.com/numToStr/Comment.nvim" }, { confirm = false })
 require("Comment").setup()
-
--- highlight TODO/INFO/WARN comments
-vim.pack.add({ "https://github.com/folke/todo-comments.nvim" }, { confirm = false })
 require("todo-comments").setup()
 
 -- uncomment to enable automatic plugin updates
