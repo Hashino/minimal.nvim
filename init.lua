@@ -166,10 +166,6 @@ local lsp_servers = {
       workspace = {
         library = vim.api.nvim_get_runtime_file('', true)
       },
-      diagnostics = {
-        globals = { "vim", },
-        undefined_global = false,
-      },
     },
   },
   clangd = {},
