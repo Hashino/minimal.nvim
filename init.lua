@@ -166,10 +166,6 @@ local lsp_servers = {
       workspace = {
         library = vim.api.nvim_get_runtime_file('', true)
       },
-      diagnostics = {
-        globals = { "vim", },
-        undefined_global = false,
-      },
     },
   },
   clangd = {},
@@ -191,10 +187,11 @@ require("mason-tool-installer").setup({
 })
 
 -- configure each lsp server on the table
+-- to check what clients are attached to the current buffer, use
+-- :checkhealth vim.lsp. to view default lsp keybindings, use :h lsp-defaults.
 for server, config in pairs(lsp_servers) do
   vim.lsp.config(server, {
     settings = config,
-    capabilities = capabilities,
 
     -- only create the keymaps if the server attaches successfully
     on_attach = function(_, bufnr)
