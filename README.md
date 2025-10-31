@@ -2,6 +2,8 @@
 Minimal neovim config for lsp + completion + highlighting. Also provides a fuzzy
 finder and some quality-of-life plugins.
 
+![screenshot](screenshot.png)
+
 # Installation
 Requires neovim version `0.12` or greater
 
