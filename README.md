@@ -9,7 +9,7 @@ bare-minimum version:
 ![bare-minimum](screenshots/bare-minimum.png)
 
 featureful version:
-![featureful](screenshots/bare-minimum.png)
+![featureful](screenshots/featureful.png)
 
 # Installation
 Requires neovim version `0.12` or greater
