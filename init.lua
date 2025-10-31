@@ -163,7 +163,7 @@ require("blink.cmp").setup({
 local lsp_servers = {
   lua_ls = {
     Lua = {
-        workspace = {
+      workspace = {
         library = vim.api.nvim_get_runtime_file('', true)
       },
       diagnostics = {
