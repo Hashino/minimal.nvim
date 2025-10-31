@@ -207,14 +207,12 @@ end
 -- NOTE: if all you want is lsp + completion + highlighting, you're done.
 -- the rest of the lines are just quality-of-life plugins and can be removed.
 
--- INFO: dependencies for other plugins
-vim.pack.add({
-  "https://github.com/nvim-lua/plenary.nvim",
-  "https://github.com/nvim-tree/nvim-web-devicons"
-}, { confirm = false })
-
 -- INFO: fuzzy finder
-vim.pack.add({ "https://github.com/nvim-telescope/telescope.nvim" }, { confirm = false })
+vim.pack.add({
+  "https://github.com/nvim-lua/plenary.nvim",       -- library dependency
+  "https://github.com/nvim-tree/nvim-web-devicons", -- nerdfont icons
+  "https://github.com/nvim-telescope/telescope.nvim"
+}, { confirm = false })
 
 require("telescope").setup({})
 
