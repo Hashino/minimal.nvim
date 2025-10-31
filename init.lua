@@ -211,7 +211,7 @@ end
 
 -- NOTE: if all you want is lsp + completion + highlighting, you're done.
 -- the rest of the lines are just quality-of-life plugins and can be removed.
--- To check the what clients are attached to the current buffer, use
+-- To check what clients are attached to the current buffer, use
 -- :checkhealth vim.lsp. To view default lsp keybindings, use :h lsp-defaults.
 
 -- INFO: dependencies for other plugins
