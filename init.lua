@@ -5,9 +5,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = true
-
 -- Enable true color support
 vim.opt.termguicolors = true
 
@@ -177,7 +174,6 @@ local lsp_servers = {
   gopls = {},
 }
 
--- lsp package manager and config
 vim.pack.add({
   "https://github.com/neovim/nvim-lspconfig",                    -- default configs for lsps
   "https://github.com/mason-org/mason.nvim",                     -- package manager
@@ -193,7 +189,7 @@ require("mason-tool-installer").setup({
 
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
--- configure each lsp server
+-- configure each lsp server on the table
 for _, server_name in pairs(vim.tbl_keys(lsp_servers)) do
   vim.lsp.config(server_name, {
     settings = lsp_servers[server_name] or {},
@@ -211,7 +207,7 @@ for _, server_name in pairs(vim.tbl_keys(lsp_servers)) do
 end
 
 -- NOTE: if all you want is lsp + completion + highlighting, you're done.
--- the rest of the lines are just quality-of-life plugins
+-- the rest of the lines are just quality-of-life plugins and can be removed.
 
 -- INFO: dependencies for other plugins
 vim.pack.add({
