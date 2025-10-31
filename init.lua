@@ -86,10 +86,6 @@ vim.diagnostic.config({
 -- clear search highlights with <Esc>
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
--- INFO: colorscheme
-vim.pack.add({ "https://github.com/rebelot/kanagawa.nvim" }, { confirm = false })
-vim.cmd.colorscheme("kanagawa")
-
 -- INFO: formatting and syntax highlighting
 vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter" }, { confirm = false })
 
