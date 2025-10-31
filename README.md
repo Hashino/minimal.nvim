@@ -2,7 +2,11 @@
 Minimal neovim config for lsp + completion + highlighting. Also provides a fuzzy
 finder and some quality-of-life plugins.
 
-![screenshot](screenshot.png)
+![screenshot1](screenshot/1.png)
+
+If you want strictly the bare minimun necessary for lsp + completion + fuzzy
+finding. download the init.lua from the `bare-minimun` branch instead
+![screenshot2](screenshot/2.png)
 
 # Installation
 Requires neovim version `0.12` or greater
