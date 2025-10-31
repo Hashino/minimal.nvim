@@ -188,7 +188,7 @@ require("mason-tool-installer").setup({
 
 -- configure each lsp server on the table
 -- to check what clients are attached to the current buffer, use
--- :checkhealth vim.lsp. to view default lsp keybindings, use :h lsp-defaults.
+-- `:checkhealth vim.lsp`. to view default lsp keybindings, use `:h lsp-defaults`.
 for server, config in pairs(lsp_servers) do
   vim.lsp.config(server, {
     settings = config,
