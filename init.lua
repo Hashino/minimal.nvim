@@ -186,8 +186,8 @@ vim.pack.add({
 }, { confirm = false })
 
 require("mason").setup()
-require("mason-lspconfig").setup()      -- translates mason package names to lspconfig server names
-require("mason-tool-installer").setup({ -- allows installation of lsp servers programmatically
+require("mason-lspconfig").setup()
+require("mason-tool-installer").setup({
   ensure_installed = vim.tbl_keys(lsp_servers),
 })
 
