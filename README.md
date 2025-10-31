@@ -1,5 +1,5 @@
 # Introduction
-Minimal neovim comes in two flavors: `bare-minimum` and `featureful`. Whereas
+`minimal.nvim` comes in two flavors: `bare-minimum` and `featureful`. Whereas
 the first contains only the bare minimum for having completions + lsp + fuzzy in
 neovim, the featureful version also contains some quality of life plugins
 
