@@ -221,16 +221,6 @@ vim.keymap.set("n", "<leader>sr", pickers.resume, { desc = "[S]earch [R]esume", 
 vim.keymap.set("n", "<leader>sh", pickers.help_tags, { desc = "[S]earch [H]elp", })
 vim.keymap.set("n", "<leader>sm", pickers.man_pages, { desc = "[S]earch [M]anuals", })
 
--- INFO: better statusline
-vim.pack.add({ "https://github.com/nvim-lualine/lualine.nvim" }, { confirm = false })
-
-require("lualine").setup({
-  options = {
-    section_separators = { left = "", right = "", },
-    component_separators = { left = "", right = "", },
-  },
-})
-
 -- INFO: keybinding helper
 vim.pack.add({ "https://github.com/folke/which-key.nvim" }, { confirm = false })
 
