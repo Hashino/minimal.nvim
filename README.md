@@ -12,7 +12,7 @@ Requires neovim version `0.12` or greater
 - `unzip`
 - `ripgrep`
 - clipboard tool: xclip/xsel/win32yank
-- a nerd font (ensure the terminal running neovim is using it)
+- a [nerd font](https://www.nerdfonts.com/) (ensure the terminal running neovim is using it)
 
 to install run:
 ```bash
