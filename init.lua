@@ -230,11 +230,6 @@ vim.keymap.set("n", "<leader>sr", pickers.resume, { desc = "[S]earch [R]esume", 
 vim.keymap.set("n", "<leader>sh", pickers.help_tags, { desc = "[S]earch [H]elp", })
 vim.keymap.set("n", "<leader>sm", pickers.man_pages, { desc = "[S]earch [M]anuals", })
 
--- INFO File editor
-vim.pack.add({ "https://github.com/stevearc/oil.nvim" }, { confirm = false })
-require('oil').setup()
-vim.keymap.set("n", "<leader>o", function() vim.cmd('Oil') end, {desc = "[O]il file editor"})
-
 -- INFO: better statusline
 vim.pack.add({ "https://github.com/nvim-lualine/lualine.nvim" }, { confirm = false })
 
