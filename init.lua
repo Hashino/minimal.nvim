@@ -221,11 +221,8 @@ require("blink.cmp").setup({
 -- see `:h lspconfig-all` for available servers and their settings
 local lsp_servers = {
   lua_ls = {
-    Lua = {
-      workspace = {
-        library = vim.api.nvim_get_runtime_file('', true)
-      },
-    },
+    -- https://luals.github.io/wiki/settings/ | `:h nvim_get_runtime_file`
+    Lua = { workspace = { library = vim.api.nvim_get_runtime_file("lua", true) }, },
   },
   clangd = {},
   rust_analyzer = {},
