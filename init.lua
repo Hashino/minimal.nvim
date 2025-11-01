@@ -269,14 +269,12 @@ end
 -- the rest of the lines are just quality-of-life/appearance plugins and
 -- can be removed.
 
--- INFO: dependencies for other plugins
-vim.pack.add({
-  "https://github.com/nvim-lua/plenary.nvim",
-  "https://github.com/nvim-tree/nvim-web-devicons"
-}, { confirm = false })
-
 -- INFO: fuzzy finder
-vim.pack.add({ "https://github.com/nvim-telescope/telescope.nvim" }, { confirm = false })
+vim.pack.add({
+  "https://github.com/nvim-lua/plenary.nvim",        -- library dependency
+  "https://github.com/nvim-tree/nvim-web-devicons",  -- icons (nerd font)
+  "https://github.com/nvim-telescope/telescope.nvim" -- the fuzzy finder
+}, { confirm = false })
 
 require("telescope").setup({})
 
