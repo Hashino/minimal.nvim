@@ -27,7 +27,7 @@ Requires neovim version `0.12` or greater
 to install run:
 
 <details>
-<summary> Linux/MacOS </summary>
+<summary> Linux/MacOS/WSL </summary>
 
 for `bare-minimum`:
 
