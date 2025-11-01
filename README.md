@@ -16,7 +16,7 @@ featureful version:
 Requires neovim version `0.12` or greater
 
 ## Dependencies
-- `git` - for vim builtin package manager. see `:h vim.pack`
+- `git` - for vim builtin package manager. (see `:h vim.pack`)
 - `unzip` - for [mason](https://github.com/mason-org/mason.nvim), specifically for `clangd`, which the config installs by default
 - `ripgrep` - for fuzzy finding 
 - clipboard tool: xclip/xsel/win32yank - for clipboard sharing between OS and neovim (see `h: clipboard-tool`)
