@@ -275,7 +275,8 @@ for server, config in pairs(lsp_servers) do
 end
 
 -- NOTE: if all you want is lsp + completion + highlighting, you're done.
--- the rest of the lines are just quality-of-life plugins and can be removed.
+-- the rest of the lines are just quality-of-life/appearance plugins and
+-- can be removed.
 
 -- INFO: dependencies for other plugins
 vim.pack.add({
