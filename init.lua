@@ -15,9 +15,6 @@ vim.opt.relativenumber = true
 -- enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = "a"
 
--- don't show the mode, since it's already in the status line
-vim.opt.showmode = false
-
 -- sync clipboard between OS and Neovim.
 --  remove this option if you want your OS clipboard to remain independent.
 --  see `:help 'clipboard'`
