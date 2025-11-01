@@ -86,6 +86,21 @@ vim.diagnostic.config({
 -- clear search highlights with <Esc>
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- INFO: plugins
+-- we install plugins with neovim's builtin package manager: vim.pack
+-- and then enable/configure them by calling their setup functions.
+--
+-- (see `:h vim.pack` for more details on how it works)
+-- you can press `gx` on any of the plugin urls below to open them in your
+-- browser and check out their documentation and functionality.
+-- alternatively, you can run `:h {plugin-name}` to read their documentation.
+--
+-- plugins are then loaded and configured with a call to `setup` functions
+-- provided by each plugin. this is not a rule of neovim but rather a convention
+-- followed by the community.
+-- these setup calls take a table as an agument and their expected contents can
+-- vary wildly. refer to each plugin's documentation for details.
+
 -- INFO: colorscheme
 vim.pack.add({ "https://github.com/rebelot/kanagawa.nvim" }, { confirm = false })
 vim.cmd.colorscheme("kanagawa")
