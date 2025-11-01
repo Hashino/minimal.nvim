@@ -319,6 +319,9 @@ require("which-key").setup({
   }
 })
 
+-- NOTE: there are many more quality-of-life plugins available and others that
+-- achieve what these do. these are just our recommendations to start.
+
 -- INFO: utility plugins
 vim.pack.add({
   "https://github.com/windwp/nvim-autopairs",    -- auto pairs
