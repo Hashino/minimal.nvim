@@ -257,11 +257,15 @@ for server, config in pairs(lsp_servers) do
   })
 end
 
+-- NOTE: if all you want is lsp + completion + highlighting, you're done.
+-- the rest of the lines are just quality-of-life/appearance plugins and
+-- can be removed.
+
 -- INFO: fuzzy finder
 vim.pack.add({
-  "https://github.com/nvim-lua/plenary.nvim",       -- library dependency
-  "https://github.com/nvim-tree/nvim-web-devicons", -- nerdfont icons
-  "https://github.com/nvim-telescope/telescope.nvim"
+  "https://github.com/nvim-lua/plenary.nvim",        -- library dependency
+  "https://github.com/nvim-tree/nvim-web-devicons",  -- icons (nerd font)
+  "https://github.com/nvim-telescope/telescope.nvim" -- the fuzzy finder
 }, { confirm = false })
 
 require("telescope").setup({})
