@@ -185,13 +185,6 @@ require("blink.cmp").setup({
     },
   },
 
-  sources = {
-    default = {
-      "lsp",
-      "path",
-    },
-  },
-
   -- default blink keymaps
   keymap = {
     ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
