@@ -1,6 +1,6 @@
 -- INFO: introduction
 -- this is a minimal neovim configuration written in lua. this is not meant to
--- be a distribution, but rather a template for you to build upon. and/or a
+-- be a distribution, but rather a template for you to build upon and/or a
 -- reference for how to configure neovim using lua in the latest version.
 --
 -- TUTOR:
