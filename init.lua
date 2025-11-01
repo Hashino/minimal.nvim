@@ -1,4 +1,8 @@
 -- INFO: options
+-- these change the default neovim behaviours using the 'vim.opt' API.
+-- see `:h vim.opt` for more details.
+-- run `:h '{option_name}'` to see what they do and what values they can take.
+-- for example, `:h 'number'` for `vim.opt.number`.
 
 -- set <space> as the leader key
 -- must happen before plugins are loaded (otherwise wrong leader will be used)
