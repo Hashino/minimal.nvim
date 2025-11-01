@@ -26,14 +26,38 @@ Requires neovim version `0.12` or greater
 
 to install run:
 
-for `bare-minimum`
-```bash
+<details>
+<summary> Linux/MacOS </summary>
+
+for `bare-minimum`:
+
+```
 mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/bare-minimum/init.lua -O "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim/init.lua && nvim -c ':e $MYVIMRC'
 ```
-for `featureful`
-```bash
-mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/main/init.lua -O "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim/init.lua && nvim -c ':e $MYVIMRC'
+
+for `featureful`:
+
 ```
+mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/featureful/init.lua -O "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim/init.lua && nvim -c ':e $MYVIMRC'
+```
+</details>
+
+<details>
+<summary> Windows (Powershell) </summary>
+
+for `bare-minimum`:
+
+```powershell
+mkdir -Force $env:LOCALAPPDATA\nvim\ && curl https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/bare-minimum/init.lua -o $env:LOCALAPPDATA\nvim\init.lua && nvim -c ':e $MYVIMRC'
+
+```
+for `featureful`:
+
+```powershell
+mkdir -Force $env:LOCALAPPDATA\nvim\ && curl https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/featureful/init.lua -o $env:LOCALAPPDATA\nvim\init.lua && nvim -c ':e $MYVIMRC'
+```
+</details>
+
 or download [init.lua](init.lua) via the browser to the neovim config directory:
 
 ### Location
