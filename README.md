@@ -1,8 +1,11 @@
 # Introduction
-`minimal.nvim` comes in two flavors: `bare-minimum` and `featureful`. Whereas
-the first contains only the bare minimum for having completions + lsp + fuzzy
-finding in neovim, the featureful version also contains some quality of
-life/appearance plugins
+`minimal.nvim` comes in two main flavors: `bare-minimum` and `featureful`. 
+Whereas the first contains only the bare minimum for having completions + lsp + 
+fuzzy finding and sane options in neovim, the featureful version also contains
+some quality of life/appearance plugins
+
+if you want the absolte minimal code necessary for having just higlighting + 
+lsp diagnostics + completion. check out the [minimal](https://github.com/Hashino/minimal.nvim/tree/minimal/init.lua) branch
 
 ## Screenshots
 
