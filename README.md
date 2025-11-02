@@ -3,10 +3,7 @@
 
 - `featureful`: sane default options, highlighting, lsp diagnostics, completions, fuzzy finding and some quality-of-life/appearance plugins. heavily documented.
 - `light`: sane default options, highlighting, lsp diagnostics, completions and fuzzy finding. heavily documented
-- `minimal`: the absolute bare minimal for sane default options, highlighting, lsp diagnostics and completions. no comments in code
-
-if you want the absolte minimal code necessary for having just higlighting + 
-lsp diagnostics + completion. check out the [minimal](https://github.com/Hashino/minimal.nvim/tree/minimal/init.lua) branch
+- `minimal`: the absolute bare minimal for sane default options, highlighting, lsp diagnostics and completions. no documentation in code
 
 ## Screenshots
 
