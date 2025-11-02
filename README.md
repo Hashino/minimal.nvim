@@ -3,10 +3,7 @@
 
 - `featureful`: sane default options, highlighting, lsp diagnostics, completions, fuzzy finding and some quality-of-life/appearance plugins. heavily documented.
 - `light`: sane default options, highlighting, lsp diagnostics, completions and fuzzy finding. heavily documented
-- `minimal`: the absolute bare minimal for sane default options, highlighting, lsp diagnostics and completions. no comments in code
-
-if you want the absolte minimal code necessary for having just higlighting + 
-lsp diagnostics + completion. check out the [minimal](https://github.com/Hashino/minimal.nvim/tree/minimal/init.lua) branch
+- `minimal`: the absolute bare minimal for sane default options, highlighting, lsp diagnostics and completions. no documentation in code
 
 ## Screenshots
 
@@ -46,6 +43,7 @@ to install run:
 ```
 mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/featureful/init.lua -O "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim/init.lua && nvim -c ':e $MYVIMRC'
 ```
+
 </details>
 
 <details><summary> light version </summary>
@@ -53,6 +51,7 @@ mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubuser
 ```
 mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/light/init.lua -O "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim/init.lua && nvim -c ':e $MYVIMRC'
 ```
+
 </details>
 
 <details><summary> minimal version </summary>
@@ -60,6 +59,7 @@ mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubuser
 ```
 mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/minimal/init.lua -O "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim/init.lua && nvim -c ':e $MYVIMRC'
 ```
+
 </details>
 
 ---
@@ -76,6 +76,7 @@ mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubuser
 ```powershell
 mkdir -Force $env:LOCALAPPDATA\nvim\ && curl https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/featureful/init.lua -o $env:LOCALAPPDATA\nvim\init.lua && nvim -c ':e $MYVIMRC'
 ```
+
 </details>
 
 <details><summary> light version </summary>
@@ -83,6 +84,7 @@ mkdir -Force $env:LOCALAPPDATA\nvim\ && curl https://raw.githubusercontent.com/H
 ```powershell
 mkdir -Force $env:LOCALAPPDATA\nvim\ && curl https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/light/init.lua -o $env:LOCALAPPDATA\nvim\init.lua && nvim -c ':e $MYVIMRC'
 ```
+
 </details>
 
 <details><summary> minimal version </summary>
@@ -90,6 +92,7 @@ mkdir -Force $env:LOCALAPPDATA\nvim\ && curl https://raw.githubusercontent.com/H
 ```powershell
 mkdir -Force $env:LOCALAPPDATA\nvim\ && curl https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/minimal/init.lua -o $env:LOCALAPPDATA\nvim\init.lua && nvim -c ':e $MYVIMRC'
 ```
+
 </details>
 
 ---
