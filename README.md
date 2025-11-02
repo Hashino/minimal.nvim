@@ -1,5 +1,9 @@
 # Introduction
-`minimal.nvim` comes in three flavors: `featureful`, `light` and `minimal`. 
+`minimal.nvim` is a neovim 0.12 configuration written in lua. this is not meant
+to be a distribution, but rather a template for you to build upon and/or a
+reference for how to configure neovim using lua in the latest version.
+
+it comes in three flavors: `featureful`, `light` and `minimal`. 
 
 - `featureful`: sane default options, highlighting, lsp diagnostics, completions, fuzzy finding and some quality-of-life/appearance plugins. heavily documented.
 - `light`: sane default options, highlighting, lsp diagnostics, completions and fuzzy finding. heavily documented
