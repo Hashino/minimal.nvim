@@ -39,11 +39,14 @@ to install run:
 <details>
 <summary> Linux/MacOS/WSL </summary>
 
+---
+
 <details><summary> featureful version </summary>
 
 ```
 mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/featureful/init.lua -O "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim/init.lua && nvim -c ':e $MYVIMRC'
 ```
+
 </details>
 
 <details><summary> light version </summary>
@@ -51,6 +54,7 @@ mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubuser
 ```
 mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/light/init.lua -O "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim/init.lua && nvim -c ':e $MYVIMRC'
 ```
+
 </details>
 
 <details><summary> minimal version </summary>
@@ -58,18 +62,24 @@ mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubuser
 ```
 mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && wget https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/minimal/init.lua -O "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim/init.lua && nvim -c ':e $MYVIMRC'
 ```
+
 </details>
+
+---
 
 </details>
 
 <details>
 <summary> Windows (Powershell) </summary>
 
+---
+
 <details><summary> featureful version </summary>
 
 ```powershell
 mkdir -Force $env:LOCALAPPDATA\nvim\ && curl https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/featureful/init.lua -o $env:LOCALAPPDATA\nvim\init.lua && nvim -c ':e $MYVIMRC'
 ```
+
 </details>
 
 <details><summary> light version </summary>
@@ -77,6 +87,7 @@ mkdir -Force $env:LOCALAPPDATA\nvim\ && curl https://raw.githubusercontent.com/H
 ```powershell
 mkdir -Force $env:LOCALAPPDATA\nvim\ && curl https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/light/init.lua -o $env:LOCALAPPDATA\nvim\init.lua && nvim -c ':e $MYVIMRC'
 ```
+
 </details>
 
 <details><summary> minimal version </summary>
@@ -84,7 +95,10 @@ mkdir -Force $env:LOCALAPPDATA\nvim\ && curl https://raw.githubusercontent.com/H
 ```powershell
 mkdir -Force $env:LOCALAPPDATA\nvim\ && curl https://raw.githubusercontent.com/Hashino/minimal.nvim/refs/heads/minimal/init.lua -o $env:LOCALAPPDATA\nvim\init.lua && nvim -c ':e $MYVIMRC'
 ```
+
 </details>
+
+---
 
 </details>
 
