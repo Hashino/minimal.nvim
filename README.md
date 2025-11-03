@@ -31,7 +31,8 @@ Requires neovim version `0.12` or greater
 - a [nerd font](https://www.nerdfonts.com/) (ensure the terminal running neovim is using it)
 
 > [!NOTE]
-> for the minimal version, only `git` is required
+> for the minimal version, only `git` is required.
+> you'll need, however, to install lsps trough your OS package manager
 
 ---
 
