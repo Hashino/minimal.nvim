@@ -1,3 +1,5 @@
+---@diagnostic disable: missing-fields
+
 -- INFO: introduction
 -- this is a minimal neovim configuration written in lua. this is not meant to
 -- be a distribution, but rather a template for you to build upon and/or a
@@ -141,23 +143,7 @@ vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter" }, { confirm
 require("nvim-treesitter.install").update("all")
 
 require("nvim-treesitter.configs").setup({
-  sync_install = true,
-
-  modules = {},
-  ignore_install = {},
-
-  ensure_installed = {
-    "lua",
-    "c",
-    "rust",
-    "go",
-  },
-
   auto_install = true, -- autoinstall languages that are not installed yet
-
-  highlight = {
-    enable = true,
-  },
 })
 
 -- INFO: completion engine
@@ -241,10 +227,6 @@ for server, config in pairs(lsp_servers) do
     end,
   })
 end
-
--- NOTE: if all you want is lsp + completion + highlighting, you're done.
--- the rest of the lines are just quality-of-life/appearance plugins and
--- can be removed.
 
 -- INFO: fuzzy finder
 vim.pack.add({
