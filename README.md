@@ -32,7 +32,6 @@ Requires neovim version `0.12` or greater
 
 > [!NOTE]
 > for the minimal version, only `git` is required.
-> you'll need, however, to install lsps trough your OS package manager
 
 ---
 
