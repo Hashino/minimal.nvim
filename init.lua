@@ -1,6 +1,8 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
+
 vim.opt.signcolumn = "yes"
+
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
@@ -19,6 +21,7 @@ vim.pack.add({
 
 require("nvim-treesitter.install").update("all")
 require("nvim-treesitter.configs").setup({ auto_install = true })
+
 require("blink.cmp").setup({ fuzzy = { implementation = "lua" } })
 
 local lsp_servers = {
