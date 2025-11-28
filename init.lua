@@ -222,8 +222,8 @@ for server, config in pairs(lsp_servers) do
       vim.keymap.set("n", "grd", vim.lsp.buf.definition,
         { buffer = bufnr, desc = "vim.lsp.buf.definition()", })
 
-      vim.keymap.set("n", "<leader>f", vim.lsp.buf.format,
-        { buffer = bufnr, desc = "LSP: [F]ormat Document", })
+      vim.keymap.set("n", "grf", vim.lsp.buf.format,
+        { buffer = bufnr, desc = "vim.lsp.buf.format()", })
     end,
   })
 end
