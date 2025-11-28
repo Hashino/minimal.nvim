@@ -2,7 +2,7 @@
 
 -- INFO: introduction (GUIDE.md:1)
 
--- INFO: options (GUIDE.md:48)
+-- INFO: options (GUIDE.md:?)
 
 -- set <space> as the leader key
 -- must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -57,13 +57,15 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.textwidth = 80
 
+-- INFO: diagnostics (GUIDE.md:?)
+
 vim.diagnostic.config({
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = " ",
-      [vim.diagnostic.severity.WARN] = " ",
-      [vim.diagnostic.severity.INFO] = " ",
-      [vim.diagnostic.severity.HINT] = " ",
+      [vim.diagnostic.severity.WARN]  = " ",
+      [vim.diagnostic.severity.INFO]  = " ",
+      [vim.diagnostic.severity.HINT]  = " ",
     },
   },
   virtual_text = true, -- show inline diagnostics
@@ -72,9 +74,9 @@ vim.diagnostic.config({
 -- clear search highlights with <Esc>
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
--- INFO: plugins (GUIDE.md:59)
+-- INFO: plugins (GUIDE.md:?)
 
--- INFO: formatting and syntax highlighting
+-- INFO: formatting and syntax highlighting (GUIDE.md:?)
 vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter" }, { confirm = false })
 
 -- equivalent to :TSUpdate
@@ -84,7 +86,7 @@ require("nvim-treesitter.configs").setup({
   auto_install = true, -- autoinstall languages that are not installed yet
 })
 
--- INFO: completion engine
+-- INFO: completion engine (GUIDE.md:?)
 vim.pack.add({ "https://github.com/saghen/blink.cmp" }, { confirm = false })
 
 require("blink.cmp").setup({
@@ -117,7 +119,7 @@ require("blink.cmp").setup({
   },
 })
 
--- INFO: lsp server installation and configuration
+-- INFO: lsp server installation and configuration (GUIDE.md:?)
 
 -- lsp servers we want to use and their configuration
 -- see `:h lspconfig-all` for available servers and their settings
@@ -134,9 +136,7 @@ local lsp_servers = {
 vim.pack.add({
   "https://github.com/neovim/nvim-lspconfig", -- default configs for lsps
 
-  -- NOTE: if you'd rather install the lsps through your OS package manager you
-  -- can delete the next three mason-related lines and their setup calls below.
-  -- see `:h lsp-quickstart` for more details.
+  -- WARN: mason and its related plugins are optional (GUIDE.md:?)
   "https://github.com/mason-org/mason.nvim",                     -- package manager
   "https://github.com/mason-org/mason-lspconfig.nvim",           -- lspconfig bridge
   "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" -- auto installer
@@ -166,7 +166,7 @@ for server, config in pairs(lsp_servers) do
   })
 end
 
--- INFO: fuzzy finder
+-- INFO: fuzzy finder (GUIDE.md:?)
 vim.pack.add({
   "https://github.com/nvim-lua/plenary.nvim",        -- library dependency
   "https://github.com/nvim-tree/nvim-web-devicons",  -- icons (nerd font)
@@ -187,7 +187,7 @@ vim.keymap.set("n", "<leader>sr", pickers.resume, { desc = "[S]earch [R]esume", 
 vim.keymap.set("n", "<leader>sh", pickers.help_tags, { desc = "[S]earch [H]elp", })
 vim.keymap.set("n", "<leader>sm", pickers.man_pages, { desc = "[S]earch [M]anuals", })
 
--- INFO: keybinding helper
+-- INFO: keybinding helper (GUIDE.md:?)
 vim.pack.add({ "https://github.com/folke/which-key.nvim" }, { confirm = false })
 
 require("which-key").setup({
