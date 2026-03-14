@@ -25,7 +25,6 @@
 -- this configuration assumes you have the following tools installed on your
 -- system:
 --    `git` - for vim builtin package manager. (see `:h vim.pack`)
---    `unzip` - for mason, specifically for `clangd`, which the config installs by default
 --    `ripgrep` - for fuzzy finding
 --    clipboard tool: xclip/xsel/win32yank - for clipboard sharing between OS and neovim (see `h: clipboard-tool`)
 --    a nerdfont (ensure the terminal running neovim is using it)
