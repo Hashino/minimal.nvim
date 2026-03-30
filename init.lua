@@ -144,7 +144,7 @@ vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter" }, { confirm
 -- equivalent to :TSUpdate
 require("nvim-treesitter.install").update("all")
 
-require("nvim-treesitter.configs").setup({
+require("nvim-treesitter.config").setup({
   auto_install = true, -- autoinstall languages that are not installed yet
 })
 
