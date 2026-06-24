@@ -141,11 +141,18 @@ vim.cmd.colorscheme("catppuccin")
 -- INFO: formatting and syntax highlighting
 vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter" }, { confirm = false })
 
--- equivalent to :TSUpdate
-require("nvim-treesitter.install").update("all")
-
 require("nvim-treesitter.configs").setup({
   auto_install = true, -- autoinstall languages that are not installed yet
+})
+
+-- start treesitter highlighting on buffers that have a parser available
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function(args)
+    local lang = vim.treesitter.language.get_lang(vim.bo[args.buf].filetype)
+    if lang and vim.treesitter.language.add(lang) then
+      vim.treesitter.start(args.buf, lang)
+    end
+  end,
 })
 
 -- INFO: completion engine
