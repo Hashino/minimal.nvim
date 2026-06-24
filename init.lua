@@ -21,8 +21,18 @@ vim.pack.add({
   "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
 }, { confirm = false })
 
-require("nvim-treesitter.install").update("all")
-require("nvim-treesitter.configs").setup({ auto_install = true })
+require("nvim-treesitter.configs").setup({
+  auto_install = true,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function(args)
+    local lang = vim.treesitter.language.get_lang(vim.bo[args.buf].filetype)
+    if lang and vim.treesitter.language.add(lang) then
+      vim.treesitter.start(args.buf, lang)
+    end
+  end,
+})
 
 require("blink.cmp").setup({ fuzzy = { implementation = "lua" } })
 
